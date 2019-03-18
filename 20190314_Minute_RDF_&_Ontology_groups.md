@@ -34,6 +34,7 @@ Most of the data could be easily translated except how data on population would 
 1.	Use of Class defined as Agent which includes (households, individuals, person)
 2.	Use external RDF ontology
 3.	Develop a data package to store information 
+***
 Action – The above options can be discussed further.
 * ***GitHub repos- BEP 0003 and Deliverables***
 If we plan to have two different platforms of GitHub. We must clarify on how they would be used by participants in the group. And most importantly avoid duplication of information
