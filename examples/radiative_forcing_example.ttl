@@ -1,0 +1,67 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bont: <http://ontology.bonsai.uno/core#> .
+@prefix om2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+### Natural language
+
+# 100 kg of CO2
+# input of Atmospheric energy balance
+
+# 90 W/m^2 of radiative forcing
+# output of Atmospheric energy balance 
+
+
+
+## Flows
+
+_:uri1 a bont:Flow ;
+     bont:inputOf _:uri2 ;
+     om2:hasValue _:uri3 ;
+     bont:objectType _:uri4 .
+
+
+_:uri6 a bont:Flow ;
+    bont:outputOf _:uri2 ;
+    om2:hasValue _:uri7 ;
+    bont:objectType _:uri8 .
+
+
+
+## Points
+
+_:uri3 a om2:Point ;
+    om2:hasNumericValue 100 ;
+    om2:Unit om2:kilogram .
+
+
+_:uri7 a om2:Point ;
+    om2:hasNumericValue 90 ;
+    om2:Unit om2:wattPerSquareMetre .
+
+
+
+
+## Activity
+
+_:uri2 a bont:Activity ;
+    bont:hasType _:uri5 .
+
+
+## Activity Type
+_:uri5 a bont:ActivityType ;
+    rdfs:label "Atmospheric energy balance" .
+
+
+
+## Object Type
+
+_:uri4 a bont:FlowObject ;
+    rdfs:label "CO2"
+
+
+_:uri8 a bont:FlowObject ;
+    rdfs:label "Radiative forcing" .
+
+
+
+
