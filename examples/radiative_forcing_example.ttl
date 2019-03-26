@@ -10,6 +10,11 @@
 # 90 W/m^2 of radiative forcing
 # output of Atmospheric energy balance 
 
+# 90 W/m^2 of radiative forcing
+# input of Temperature increase
+
+# 3 C of Temperature increase over 100yrs horizon
+# output of Temperature increase
 
 
 ## Flows
@@ -27,18 +32,33 @@ _:uri6 a bont:Flow ;
     om2:hasUnit om2:wattPerSquareMetre ;
     bont:objectType _:uri8 .
 
-
+_:uri9 a bont:Flow ;
+	bont:inputOf _:uri10 ;
+	om2:hasNumericValue 90 ;
+	om2:hasUnit om2:wattPerSquareMetre .
+	bont:objectType _:uri12
+	
+_:uri13 a bont:Flow ;
+	bont:outputOf _:uri10 ;
+	om2:hasNumericValue 3 ;
+	om2:hasUnit om2:CelsiusTemperature .
+	bont:objectType _:uri12
 
 ## Activity
 
 _:uri2 a bont:Activity ;
     bont:hasType _:uri5 .
 
+_:uri10 a bont:Activity ;
+	bont:hasType _:uri11 .
+
 
 ## Activity Type
 _:uri5 a bont:ActivityType ;
     rdfs:label "Atmospheric energy balance" .
 
+_:uri11 a bont:ActivityType ;
+	rdfs:label "Temperature increase" .
 
 
 ## Object Type
@@ -46,10 +66,10 @@ _:uri5 a bont:ActivityType ;
 _:uri4 a bont:FlowObject ;
     rdfs:label "CO2" .
 
-
 _:uri8 a bont:FlowObject ;
     rdfs:label "Radiative forcing" .
 
-
+_:uri12 a bont:FlowObject ;
+    rdfs:label "Temperature increase over 100yrs horizon" .
 
 
