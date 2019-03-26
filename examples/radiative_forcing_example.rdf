@@ -1,0 +1,36 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:bont="http://ontology.bonsai.uno/core#"
+    xmlns:om2="http://www.ontology-of-units-of-measure.org/resource/om-2/" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdfs:label>Atmospheric energy balance</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <bont:hasType rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <bont:objectType rdf:nodeID="A3"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerSquareMetre"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</om2:hasNumericValue>
+    <bont:outputOf rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdfs:label>CO2</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdfs:label>Radiative forcing</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <bont:objectType rdf:nodeID="A4"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+</rdf:RDF>
