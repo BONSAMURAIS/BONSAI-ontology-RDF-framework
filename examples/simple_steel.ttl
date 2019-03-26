@@ -17,28 +17,16 @@
 
 _:uri1 a bont:Flow ;
      bont:inputOf _:uri2 ;
-     om2:hasValue _:uri3 ;
+     om2:hasNumericValue 100 ;
+     om2:hasUnit om2:kilogram .
      bont:objectType _:uri4 .
 
 
 _:uri6 a bont:Flow ;
     bont:outputOf _:uri2 ;
-    om2:hasValue _:uri7 ;
-    bont:objectType _:uri8 .
-
-
-
-## Points
-
-_:uri3 a om2:Point ;
-    om2:hasNumericValue 100 ;
-    om2:hasUnit om2:kilogram .
-
-
-_:uri7 a om2:Point ;
     om2:hasNumericValue 90 ;
     om2:hasUnit om2:kilogram .
-
+    bont:objectType _:uri8 .
 
 
 
