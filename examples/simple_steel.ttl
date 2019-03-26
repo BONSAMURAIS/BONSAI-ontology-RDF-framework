@@ -1,7 +1,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix bont: <http://ontology.bonsai.uno/core#> .
 @prefix om2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
-@prefix geoname: <http://sws.geonames.org/>
+@prefix geo: <http://sws.geonames.org/> .
 
 ### Natural language
 
@@ -38,9 +38,9 @@ _:uri2 a bont:Activity ;
 
 ## Agent
 
-_uri:9 a bont:Agent ;
-    rdfs:label "FactoryX"
-    bont:hasLocation geo:1275339
+_:uri9 a bont:Agent ;
+    rdfs:label "FactoryX" ;
+    bont:hasLocation geo:1275339 .
 
 
 
@@ -53,7 +53,7 @@ _:uri5 a bont:ActivityType ;
 ## Object Type
 
 _:uri4 a bont:FlowObject ;
-    rdfs:label "Coal"
+    rdfs:label "Coal" .
 
 
 _:uri8 a bont:FlowObject ;
