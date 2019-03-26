@@ -20,8 +20,6 @@ python rdfconvert.py --from ttl --to xml -f -o ouput/ input/
 #### TTL to JSON-LD 
 python rdfconvert.py --from ttl --to xml -f -o ouput/ input/
 
-###  Single file convert
-
 -f => overwrite results
 
 -R => recursive lookup in input folder, structured maintained in output folder
@@ -29,3 +27,6 @@ python rdfconvert.py --from ttl --to xml -f -o ouput/ input/
 ### list of all formats supported
 
 See [here](https://github.com/WimPessemier/rdfconvert)
+
+###  Single file convert
+python rdfconvert.py --from ttl --to xml -f -o ouput/ input/filename.extension
