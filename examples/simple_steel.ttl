@@ -1,0 +1,76 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bont: <http://ontology.bonsai.uno/core#> .
+@prefix om2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix geoname: <http://sws.geonames.org/>
+
+### Natural language
+
+# 100 kg of Coal
+# input of Steel production of FactoryX in Mumbai
+
+# 90 kg of Steel
+# output of Steel production of FactoryX in Mumbai
+
+
+
+## Flows
+
+_:uri1 a bont:Flow ;
+     bont:inputOf _:uri2 ;
+     om2:hasValue _:uri3 ;
+     bont:objectType _:uri4 .
+
+
+_:uri6 a bont:Flow ;
+    bont:outputOf _:uri2 ;
+    om2:hasValue _:uri7 ;
+    bont:objectType _:uri8 .
+
+
+
+## Points
+
+_:uri3 a om2:Point ;
+    om2:hasNumericValue 100 ;
+    om2:hasUnit om2:kilogram .
+
+
+_:uri7 a om2:Point ;
+    om2:hasNumericValue 90 ;
+    om2:hasUnit om2:kilogram .
+
+
+
+
+## Activity
+
+_:uri2 a bont:Activity ;
+    bont:hasType _:uri5 .
+
+
+## Agent
+
+_uri:9 a bont:Agent ;
+    rdfs:label "FactoryX"
+    bont:hasLocation geo:1275339
+
+
+
+## Activity Type
+_:uri5 a bont:ActivityType ;
+    rdfs:label "Steel production" .
+
+
+
+## Object Type
+
+_:uri4 a bont:FlowObject ;
+    rdfs:label "Coal"
+
+
+_:uri8 a bont:FlowObject ;
+    rdfs:label "Steel" .
+
+
+
+
