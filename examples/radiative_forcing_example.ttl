@@ -56,7 +56,7 @@ _:uri5 a bont:ActivityType ;
 ## Object Type
 
 _:uri4 a bont:FlowObject ;
-    rdfs:label "CO2"
+    rdfs:label "CO2" .
 
 
 _:uri8 a bont:FlowObject ;
