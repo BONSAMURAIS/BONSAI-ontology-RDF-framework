@@ -33,7 +33,7 @@ _:uri6 a bont:Flow ;
     bont:objectType _:uri8 .
 
 
-_:uri13 a bont:Flow
+_:uri13 a bont:Flow ;
     bont:outputOf _:uri11 ;
     om2:hasNumericValue 3 ;
     om2:hasUnit om2:CelsiusTemperature ;

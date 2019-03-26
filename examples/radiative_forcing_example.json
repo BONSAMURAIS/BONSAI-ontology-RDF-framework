@@ -1,39 +1,36 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "bont:FlowObject",
-    "label" : "Radiative forcing"
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b2",
+    "objectType" : "_:b1",
+    "om2:hasNumericValue" : 100,
+    "hasUnit" : "om2:kilogram"
   }, {
     "@id" : "_:b1",
-    "@type" : "bont:ActivityType",
-    "label" : "Atmospheric energy balance"
-  }, {
-    "@id" : "_:b2",
-    "@type" : "bont:Flow",
-    "objectType" : "_:b0",
-    "outputOf" : "_:b3",
-    "om2:hasNumericValue" : 90,
-    "hasUnit" : "om2:wattPerSquareMetre"
-  }, {
-    "@id" : "_:b3",
-    "@type" : "bont:Activity",
-    "hasType" : "_:b1"
-  }, {
-    "@id" : "_:b4",
     "@type" : "bont:FlowObject",
     "label" : "CO2"
   }, {
-    "@id" : "_:b5",
+    "@id" : "_:b2",
+    "@type" : "bont:Activity",
+    "hasType" : "_:b3"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "bont:ActivityType",
+    "label" : "Atmospheric energy balance"
+  }, {
+    "@id" : "_:b4",
     "@type" : "bont:Flow",
-    "inputOf" : "_:b3",
-    "objectType" : "_:b4",
-    "om2:hasNumericValue" : 100,
-    "hasUnit" : "om2:kilogram"
+    "objectType" : "_:b5",
+    "outputOf" : "_:b2",
+    "om2:hasNumericValue" : 90,
+    "hasUnit" : "om2:wattPerSquareMetre"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "bont:FlowObject",
+    "label" : "Radiative forcing"
   } ],
   "@context" : {
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
     "objectType" : {
       "@id" : "http://ontology.bonsai.uno/core#objectType",
       "@type" : "@id"
@@ -46,16 +43,19 @@
       "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericValue",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
-    "outputOf" : {
-      "@id" : "http://ontology.bonsai.uno/core#outputOf",
+    "inputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#inputOf",
       "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "hasType" : {
       "@id" : "http://ontology.bonsai.uno/core#hasType",
       "@type" : "@id"
     },
-    "inputOf" : {
-      "@id" : "http://ontology.bonsai.uno/core#inputOf",
+    "outputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#outputOf",
       "@type" : "@id"
     },
     "om2" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",
