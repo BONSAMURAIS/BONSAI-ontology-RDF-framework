@@ -31,12 +31,12 @@ _:uri6 a bont:Flow ;
 
 _:uri3 a om2:Point ;
     om2:hasNumericValue 100 ;
-    om2:Unit om2:kilogram .
+    om2:hasUnit om2:kilogram .
 
 
 _:uri7 a om2:Point ;
     om2:hasNumericValue 90 ;
-    om2:Unit om2:wattPerSquareMetre .
+    om2:hasUnit om2:wattPerSquareMetre .
 
 
 
