@@ -17,14 +17,14 @@
 _:uri1 a bont:Flow ;
      bont:inputOf _:uri2 ;
      om2:hasNumericValue 100 ;
-     om2:hasUnit om2:kilogram .
+     om2:hasUnit om2:kilogram ;
      bont:objectType _:uri4 .
 
 
 _:uri6 a bont:Flow ;
     bont:outputOf _:uri2 ;
     om2:hasNumericValue 90 ;
-    om2:hasUnit om2:wattPerSquareMetre .
+    om2:hasUnit om2:wattPerSquareMetre ;
     bont:objectType _:uri8 .
 
 
