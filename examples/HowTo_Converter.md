@@ -23,6 +23,7 @@ python rdfconvert.py --from ttl --to xml -f -o ouput/ input/
 ###  Single file convert
 
 -f => overwrite results
+
 -R => recursive lookup in input folder, structured maintained in output folder
 
 ### list of all formats supported
