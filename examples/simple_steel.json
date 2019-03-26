@@ -1,157 +1,75 @@
-[
-  {
-    "@type": [
-      "http://ontology.bonsai.uno/core#Flow"
-    ],
-    "http://ontology.bonsai.uno/core#inputOf": [
-      {
-        "@id": "_:b1"
-      }
-    ],
-    "http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue": [
-      {
-        "@id": "_:b2"
-      }
-    ],
-    "http://ontology.bonsai.uno/core#objectType": [
-      {
-        "@id": "_:b3"
-      }
-    ]
-  },
-  {
-    "@id": "_:b1",
-    "@type": [
-      "http://ontology.bonsai.uno/core#Activity"
-    ],
-    "http://ontology.bonsai.uno/core#hasType": [
-      {
-        "@id": "_:b7"
-      }
-    ]
-  },
-  {
-    "@id": "_:b2",
-    "@type": [
-      "http://www.ontology-of-units-of-measure.org/resource/om-2/Point"
-    ],
-    "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericValue": [
-      {
-        "@value": 100
-      }
-    ],
-    "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
-      {
-        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"
-      }
-    ]
-  },
-  {
-    "@id": "_:b3",
-    "@type": [
-      "http://ontology.bonsai.uno/core#FlowObject"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Coal"
-      }
-    ]
-  },
-  {
-    "@type": [
-      "http://ontology.bonsai.uno/core#Flow"
-    ],
-    "http://ontology.bonsai.uno/core#outputOf": [
-      {
-        "@id": "_:b1"
-      }
-    ],
-    "http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue": [
-      {
-        "@id": "_:b5"
-      }
-    ],
-    "http://ontology.bonsai.uno/core#objectType": [
-      {
-        "@id": "_:b6"
-      }
-    ]
-  },
-  {
-    "@id": "_:b5",
-    "@type": [
-      "http://www.ontology-of-units-of-measure.org/resource/om-2/Point"
-    ],
-    "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericValue": [
-      {
-        "@value": 90
-      }
-    ],
-    "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
-      {
-        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"
-      }
-    ]
-  },
-  {
-    "@id": "_:b6",
-    "@type": [
-      "http://ontology.bonsai.uno/core#FlowObject"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Steel"
-      }
-    ]
-  },
-  {
-    "@id": "_:b7",
-    "@type": [
-      "http://ontology.bonsai.uno/core#ActivityType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Steel production"
-      }
-    ]
-  },
-  {
-    "@type": [
-      "http://ontology.bonsai.uno/core#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "FactoryX"
-      }
-    ],
-    "http://ontology.bonsai.uno/core#hasLocation": [
-      {
-        "@id": "http://sws.geonames.org/1275339"
-      }
-    ]
-  },
-  {
-    "@id": "http://ontology.bonsai.uno/core#Activity"
-  },
-  {
-    "@id": "http://ontology.bonsai.uno/core#ActivityType"
-  },
-  {
-    "@id": "http://ontology.bonsai.uno/core#Agent"
-  },
-  {
-    "@id": "http://ontology.bonsai.uno/core#Flow"
-  },
-  {
-    "@id": "http://ontology.bonsai.uno/core#FlowObject"
-  },
-  {
-    "@id": "http://sws.geonames.org/1275339"
-  },
-  {
-    "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Point"
-  },
-  {
-    "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "bont:FlowObject",
+    "label" : "Steel"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "bont:FlowObject",
+    "label" : "Coal"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "bont:Activity",
+    "hasType" : "_:b3"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "bont:ActivityType",
+    "label" : "Steel production"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "bont:Agent",
+    "hasLocation" : "geo:1275339",
+    "label" : "FactoryX"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b2",
+    "objectType" : "_:b1",
+    "om2:hasNumericValue" : 100,
+    "hasUnit" : "om2:kilogram"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "bont:Flow",
+    "objectType" : "_:b0",
+    "outputOf" : "_:b2",
+    "om2:hasNumericValue" : 90,
+    "hasUnit" : "om2:kilogram"
+  } ],
+  "@context" : {
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasType" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasType",
+      "@type" : "@id"
+    },
+    "hasLocation" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasLocation",
+      "@type" : "@id"
+    },
+    "objectType" : {
+      "@id" : "http://ontology.bonsai.uno/core#objectType",
+      "@type" : "@id"
+    },
+    "hasUnit" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit",
+      "@type" : "@id"
+    },
+    "hasNumericValue" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "inputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#inputOf",
+      "@type" : "@id"
+    },
+    "outputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#outputOf",
+      "@type" : "@id"
+    },
+    "geo" : "http://sws.geonames.org/",
+    "om2" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "bont" : "http://ontology.bonsai.uno/core#"
   }
-]
+}
