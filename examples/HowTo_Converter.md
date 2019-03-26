@@ -18,15 +18,38 @@ From command line, use :
 python rdfconvert.py --from ttl --to xml -f -o ouput/ input/
 
 #### TTL to JSON-LD 
-python rdfconvert.py --from ttl --to xml -f -o ouput/ input/
+python rdfconvert.py --from ttl --to json-ld -f -o ouput/ input/
 
--f => overwrite results
-
+-f => overwrite results in output folder
 -R => recursive lookup in input folder, structured maintained in output folder
 
 ### list of all formats supported
 
-See [here](https://github.com/WimPessemier/rdfconvert)
+Default extensions for INPUT format:
+ - json-ld             : ['.jsonld', '.json-ld']
+ - trix                : ['.xml', '.trix']
+ - ttl                 : ['.ttl']
+ - application/rdf+xml : ['.xml', '.rdf', '.owl']
+ - nquads              : ['.nq']
+ - xml                 : ['.xml', '.rdf', '.owl']
+ - text/html           : ['.html']
+ - rdf-json            : ['.json']
+ - rdfa                : ['.xhtml', '.html']
+ - n3                  : ['.n3']
+ - nt                  : ['.nt']
+
+Default extension for OUTPUT format:
+ - xml        : '.xml'
+ - json-ld    : '.jsonld'
+ - trix       : '.xml'
+ - pretty-xml : '.xml'
+ - ttl        : '.ttl'
+ - nquads     : '.nq'
+ - n3         : '.n3'
+ - nt         : '.nt'
+ - rdf-json   : '.json'
+ 
+Copied from [here](https://github.com/WimPessemier/rdfconvert)
 
 ###  Single file convert
 python rdfconvert.py --from ttl --to xml -f -o ouput/ input/filename.extension
