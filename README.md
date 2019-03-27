@@ -16,9 +16,12 @@ The actual ontology is updated in the sister repository: (ontology)[https://gith
 
 Current work is in the `core` ontology.
 
-Our Bonsai namespace URI example is:
+Two Bonsai namespace URI examples are:
 
-```rdf.bonsai.uno/exiobase3_3_17/activities/A_ALUM```
+```
+rdf.bonsai.uno/exiobase3_3_17/activities/A_ALUM
+rdf.bonsai.uno/exiobase3_3_17/flowobjects/C_ADDC
+```
 
 Which follows the structure:
 
