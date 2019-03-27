@@ -1,0 +1,189 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ns0: <http://purl.org/vocab/vann/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+@prefix bont: <http://ontology.bonsai.uno/core#> .
+@prefix om2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+### Natural language
+
+## Based on example_rawdata.ttl
+## Electricity is produced from different fuels and consumed for car production and household
+## Here we link the flows in an average way and with the definition of an activity for the "market" for electricity
+
+
+## Flows
+
+# Electricity production input/output
+_:uri51 a bont:Flow ;
+     bont:inputOf _:uri21 ;
+     om2:hasNumericValue 100 ;
+     om2:hasUnit om2:kilogram ;
+     bont:objectType _:uri41 .
+
+_:uri551 a bont:Flow ;
+    bont:outputOf _:uri21 ;
+	bont:inputOf _:uri26 ;
+    om2:hasNumericValue 150 ;
+    om2:hasUnit om2:kilowattHour ;
+    bont:objectType _:uri44 .	
+
+_:uri52 a bont:Flow ;
+     bont:inputOf _:uri22 ;
+     om2:hasNumericValue 350 ;
+     om2:hasUnit om2:kilogram ;
+     bont:objectType _:uri42 .
+
+ _:uri552 a bont:Flow ;
+	bont:outputOf _:uri22 ;
+	bont:inputOf _:uri26 ;
+	om2:hasNumericValue 100 ;
+	om2:hasUnit om2:kilowattHour ;
+	bont:objectType _:uri44 .
+
+# Steel production input/output
+
+_:uri53 a bont:Flow ;
+     bont:inputOf _:uri23 ;
+     om2:hasNumericValue 500 ;
+     om2:hasUnit om2:kilogram ;
+     bont:objectType _:uri41 .
+
+ _:uri54 a bont:Flow ;
+ bont:inputOf _:uri23 ;
+ om2:hasNumericValue 1500 ;
+ om2:hasUnit om2:kilogram ;
+ bont:objectType _:uri43 .
+ 
+ _:uri553 a bont:Flow ;
+bont:outputOf _:uri23 ;
+bont:inputOf _:uri24 ;
+om2:hasNumericValue 1300 ;
+om2:hasUnit om2:kilogram ;
+bont:objectType _:uri45 .
+
+# Car production input/output
+_:uri55 a bont:Flow ;
+     bont:inputOf _:uri24 ;
+	 bont:outputOf _:uri26 ;
+     om2:hasNumericValue 125 ;
+     om2:hasUnit om2:kilowattHour ;
+     bont:objectType _:uri44 .
+
+# input of steel to car production is already accounted in uri553
+ 
+ _:uri555 a bont:Flow ;
+bont:outputOf _:uri24 ;
+om2:hasNumericValue 1 ;
+# has no unit
+bont:objectType _:uri46 .
+
+# Household electricity consumption
+_:uri57 a bont:Flow ;
+     bont:inputOf _:uri25 ;
+	 bont:outputOf _:uri26 ;
+     om2:hasNumericValue 125 ;
+     om2:hasUnit om2:kilowattHour ;
+     bont:objectType _:uri44 .
+
+## Activity
+
+_:uri21 a bont:Activity ;
+	bont:determiningFlow _:uri551 ;
+    bont:hasType _:uri1 .
+	
+_:uri22 a bont:Activity ;
+	bont:determiningFlow _:uri552 ;
+    bont:hasType _:uri1 .
+	
+_:uri23 a bont:Activity ;
+	bont:determiningFlow _:uri553 ;
+    bont:hasType _:uri2 .
+	
+_:uri24 a bont:Activity ;
+	bont:determiningFlow _:uri555 ;
+    bont:hasType _:uri3 .
+	
+_:uri25 a bont:Activity ;
+	bont:determiningFlow _:uri57 ;
+    bont:hasType _:uri4 .
+
+# market for electricity
+_:uri26 a bont:Activity ;
+	bont:determiningFlow _:uri551 ;
+    bont:hasType _:uri5 .		
+
+
+## Agent
+
+_:uri11 a bont:Agent ;
+    rdfs:label "Plant A" ;
+	bont:performs _:uri21 ;
+    bont:location schema:1275339 .
+
+_:uri12 a bont:Agent ;
+    rdfs:label "Plant B" ;
+	bont:performs _:uri22 ;
+    bont:location schema:1275339 .
+
+_:uri13 a bont:Agent ;
+    rdfs:label "Factory X" ;
+	bont:performs _:uri23 ;
+    bont:location schema:1275339 .
+
+_:uri14 a bont:Agent ;
+    rdfs:label "Factory Y" ;
+	bont:performs _:uri24 ;
+    bont:location schema:1275339 .
+
+_:uri15 a bont:Agent ;
+    rdfs:label "Household" ;
+	bont:performs _:uri25 ;
+    bont:location schema:1275339 .
+
+
+
+## Activity Type
+_:uri1 a bont:ActivityType ;
+    rdfs:label "Electricity production" .
+
+_:uri2 a bont:ActivityType ;
+    rdfs:label "Steel production" .
+	
+_:uri3 a bont:ActivityType ;
+    rdfs:label "Car production" .
+	
+_:uri4 a bont:ActivityType ;
+    rdfs:label "Household final consumption" .
+	
+_:uri5 a bont:ActivityType ;
+    rdfs:label "Market for electricity" .
+	
+
+## Object Type
+
+_:uri41 a bont:FlowObject ;
+    rdfs:label "Coal" .
+
+_:uri42 a bont:FlowObject ;
+    rdfs:label "Woodchips" .
+
+_:uri43 a bont:FlowObject ;
+    rdfs:label "Iron ore" .
+
+_:uri44 a bont:FlowObject ;
+    rdfs:label "Electricity" .
+
+_:uri45 a bont:FlowObject ;
+    rdfs:label "Steel" .
+
+_:uri46 a bont:FlowObject ;
+    rdfs:label "Car" .
+
+

@@ -40,6 +40,7 @@ _:uri2 a bont:Activity ;
 
 _:uri9 a bont:Agent ;
     rdfs:label "FactoryX" ;
+	bont:performs _:uri2 ;
     bont:hasLocation geo:1275339 .
 
 
