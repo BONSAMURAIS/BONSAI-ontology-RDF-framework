@@ -19,13 +19,15 @@ Current work is in the `core` ontology.
 Two Bonsai namespace URI examples are:
 
 ```
-rdf.bonsai.uno/exiobase3_3_17/activities/A_ALUM
-rdf.bonsai.uno/exiobase3_3_17/flowobjects/C_ADDC
+rdf.bonsai.uno/activity/exiobase3_3_17/A_ALUM
+rdf.bonsai.uno/flowobject/exiobase3_3_17/C_ADDC
 ```
 
 Which follows the structure:
 
-```[generic]/[data source]/[category]/[code]```
+```[generic]/[ontologyClassName]/[dataSource]/[code]```
+
+We use singular (flowobject not flowobjects). 
 
 ## Structure
 
