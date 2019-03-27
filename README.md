@@ -19,7 +19,7 @@ Current work is in the `core` ontology.
 Two Bonsai namespace URI examples are:
 
 ```
-rdf.bonsai.uno/activity/exiobase3_3_17/A_ALUM
+rdf.bonsai.uno/activitytype/exiobase3_3_17/A_ALUM
 rdf.bonsai.uno/flowobject/exiobase3_3_17/C_ADDC
 ```
 
