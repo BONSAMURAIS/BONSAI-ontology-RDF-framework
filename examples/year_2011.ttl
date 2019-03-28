@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bont: <http://ontology.bonsai.uno/core#> .
+@prefix time: <https://www.w3.org/TR/owl-time/> .
+@prefix btime: <http://rdf.bonsai.uno/time/2011> .
+
+<http://rdf.bonsai.uno/time/2011> a time:ProperInterval;
+
+  time:hasBeginning [
+      a time:Instant ;
+      time:inXSDDate "2011-01-01"^^xsd:date ;
+  ] ;
+
+  time:hasDurationDescription [
+       a time:DurationDescription;
+       time:years "1"^^xsd:integer ;
+  ];
+
+  time:hasEnd [
+      a time:Instant ;
+      time:inXSDDate "2011-12-31"^^xsd:date ;
+  ] ;
+
+  owl:sameAs <http://reference.data.gov.uk/doc/year/2011> ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q1994> .

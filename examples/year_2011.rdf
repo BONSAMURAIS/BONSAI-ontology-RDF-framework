@@ -1,0 +1,29 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:btime="http://rdf.bonsai.uno/time/2011"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:bont="http://ontology.bonsai.uno/core#"
+    xmlns:time="https://www.w3.org/TR/owl-time/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://rdf.bonsai.uno/time/2011">
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q1994"/>
+    <owl:sameAs rdf:resource="http://reference.data.gov.uk/doc/year/2011"/>
+    <time:hasEnd rdf:nodeID="A0"/>
+    <time:hasDurationDescription rdf:nodeID="A1"/>
+    <time:hasBeginning rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/ProperInterval"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</time:years>
+    <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/DurationDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-12-31</time:inXSDDate>
+    <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/Instant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-01-01</time:inXSDDate>
+    <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/Instant"/>
+  </rdf:Description>
+</rdf:RDF>

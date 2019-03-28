@@ -1,23 +1,23 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "bont:Flow",
-    "objectType" : "_:b1",
-    "outputOf" : "_:b2",
-    "om2:hasNumericValue" : 90,
-    "hasUnit" : "om2:kilogram"
-  }, {
-    "@id" : "_:b1",
     "@type" : "bont:FlowObject",
     "label" : "Steel"
   }, {
-    "@id" : "_:b2",
+    "@id" : "_:b1",
     "@type" : "bont:Activity",
-    "hasType" : "_:b3"
+    "hasType" : "_:b2"
   }, {
-    "@id" : "_:b3",
+    "@id" : "_:b2",
     "@type" : "bont:ActivityType",
     "label" : "Steel production"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "bont:Flow",
+    "objectType" : "_:b0",
+    "outputOf" : "_:b1",
+    "om2:hasNumericValue" : 90,
+    "hasUnit" : "om2:kilogram"
   }, {
     "@id" : "_:b4",
     "@type" : "bont:FlowObject",
@@ -25,7 +25,7 @@
   }, {
     "@id" : "_:b5",
     "@type" : "bont:Flow",
-    "inputOf" : "_:b2",
+    "inputOf" : "_:b1",
     "objectType" : "_:b4",
     "om2:hasNumericValue" : 100,
     "hasUnit" : "om2:kilogram"
@@ -36,6 +36,13 @@
     "label" : "FactoryX"
   } ],
   "@context" : {
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasType" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasType",
+      "@type" : "@id"
+    },
     "objectType" : {
       "@id" : "http://ontology.bonsai.uno/core#objectType",
       "@type" : "@id"
@@ -50,13 +57,6 @@
     },
     "outputOf" : {
       "@id" : "http://ontology.bonsai.uno/core#outputOf",
-      "@type" : "@id"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "hasType" : {
-      "@id" : "http://ontology.bonsai.uno/core#hasType",
       "@type" : "@id"
     },
     "inputOf" : {
