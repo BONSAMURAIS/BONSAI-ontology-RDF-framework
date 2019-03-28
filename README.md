@@ -47,6 +47,17 @@ Currently the following named graphs (and namespaces) are defined
    <http://rdf.bonsai.uno/time/>
    ```
 
+- URI for core activity types
+
+  ```
+  <http://rdf.bonsai.uno/activitytype/core/>
+  ```
+
+  Example `<http://rdf.bonsai.uno/activitytype/core/Trade>`
+  Example `<http://rdf.bonsai.uno/activitytype/core/Market>`
+  Example `<http://rdf.bonsai.uno/activitytype/core/Transport>`
+
+
 - Exiobase 3.3.17 URI to define the activity type instances
 
    ```
@@ -70,6 +81,10 @@ Currently the following named graphs (and namespaces) are defined
   ```
   <http://rdf.bonsai.uno/location/exiobase3_3_17/>
   ```
+
+
+
+
 
 ## Build Status
 
