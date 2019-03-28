@@ -12,8 +12,13 @@ The repo currently contains:
 1. The documentation of current RDF schema proposed
 2. Summary of the discussions leading to ontology development
 
+The current Ontology Schema can be visualized on [www.visualdataweb.de/ontology_v0.1.rdf](http://www.visualdataweb.de/webvowl/#iri=https://ontology.bonsai.uno/core/ontology_v0.1.rdf)
 
-The actual ontology is updated in the sister repository: (ontology)[https://github.com/BONSAMURAIS/ontology]
+
+![BONSAI schema](material/ontology_v0.1.svg)
+
+
+The actual ontology is updated in the sister repository: [ontology[(https://github.com/BONSAMURAIS/ontology)
 
 Current work is in the `core` ontology.
 
