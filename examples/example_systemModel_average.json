@@ -1,0 +1,234 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "bont:Activity",
+    "determiningFlow" : "_:b2",
+    "hasType" : "_:b1"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "bont:ActivityType",
+    "label" : "Electricity production"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "bont:FlowObject",
+    "label" : "Iron ore"
+  }, {
+    "@id" : "_:b11",
+    "@type" : "bont:FlowObject",
+    "label" : "Car"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "bont:FlowObject",
+    "label" : "Steel"
+  }, {
+    "@id" : "_:b13",
+    "@type" : "bont:Agent",
+    "location" : "schema:1275339",
+    "performs" : "_:b0",
+    "label" : "Plant B"
+  }, {
+    "@id" : "_:b14",
+    "@type" : "bont:Agent",
+    "location" : "schema:1275339",
+    "performs" : "_:b15",
+    "label" : "Plant A"
+  }, {
+    "@id" : "_:b15",
+    "@type" : "bont:Activity",
+    "determiningFlow" : "_:b29",
+    "hasType" : "_:b1"
+  }, {
+    "@id" : "_:b16",
+    "@type" : "bont:Agent",
+    "location" : "schema:1275339",
+    "performs" : "_:b17",
+    "label" : "Factory Y"
+  }, {
+    "@id" : "_:b17",
+    "@type" : "bont:Activity",
+    "determiningFlow" : "_:b27",
+    "hasType" : "_:b22"
+  }, {
+    "@id" : "_:b18",
+    "@type" : "bont:FlowObject",
+    "label" : "Electricity"
+  }, {
+    "@id" : "_:b19",
+    "@type" : "bont:Activity",
+    "determiningFlow" : "_:b29",
+    "hasType" : "_:b5"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b19",
+    "objectType" : "_:b18",
+    "outputOf" : "_:b0",
+    "om2:hasNumericValue" : 100,
+    "hasUnit" : "om2:kilowattHour"
+  }, {
+    "@id" : "_:b20",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b6",
+    "objectType" : "_:b21",
+    "om2:hasNumericValue" : 500,
+    "hasUnit" : "om2:kilogram"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "bont:FlowObject",
+    "label" : "Coal"
+  }, {
+    "@id" : "_:b22",
+    "@type" : "bont:ActivityType",
+    "label" : "Car production"
+  }, {
+    "@id" : "_:b23",
+    "@type" : "bont:Agent",
+    "location" : "schema:1275339",
+    "performs" : "_:b6",
+    "label" : "Factory X"
+  }, {
+    "@id" : "_:b24",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b0",
+    "objectType" : "_:b25",
+    "om2:hasNumericValue" : 350,
+    "hasUnit" : "om2:kilogram"
+  }, {
+    "@id" : "_:b25",
+    "@type" : "bont:FlowObject",
+    "label" : "Woodchips"
+  }, {
+    "@id" : "_:b26",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b4",
+    "objectType" : "_:b18",
+    "outputOf" : "_:b19",
+    "om2:hasNumericValue" : 125,
+    "hasUnit" : "om2:kilowattHour"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "bont:Flow",
+    "objectType" : "_:b11",
+    "outputOf" : "_:b17",
+    "om2:hasNumericValue" : 1
+  }, {
+    "@id" : "_:b28",
+    "@type" : "bont:ActivityType",
+    "label" : "Household final consumption"
+  }, {
+    "@id" : "_:b29",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b19",
+    "objectType" : "_:b18",
+    "outputOf" : "_:b15",
+    "om2:hasNumericValue" : 150,
+    "hasUnit" : "om2:kilowattHour"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "bont:Agent",
+    "location" : "schema:1275339",
+    "performs" : "_:b4",
+    "label" : "Household"
+  }, {
+    "@id" : "_:b30",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b17",
+    "objectType" : "_:b18",
+    "outputOf" : "_:b19",
+    "om2:hasNumericValue" : 125,
+    "hasUnit" : "om2:kilowattHour"
+  }, {
+    "@id" : "_:b31",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b15",
+    "objectType" : "_:b21",
+    "om2:hasNumericValue" : 100,
+    "hasUnit" : "om2:kilogram"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "bont:Activity",
+    "determiningFlow" : "_:b26",
+    "hasType" : "_:b28"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "bont:ActivityType",
+    "label" : "Market for electricity"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "bont:Activity",
+    "determiningFlow" : "_:b8",
+    "hasType" : "_:b7"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "bont:ActivityType",
+    "label" : "Steel production"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b17",
+    "objectType" : "_:b12",
+    "outputOf" : "_:b6",
+    "om2:hasNumericValue" : 1300,
+    "hasUnit" : "om2:kilogram"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b6",
+    "objectType" : "_:b10",
+    "om2:hasNumericValue" : 1500,
+    "hasUnit" : "om2:kilogram"
+  } ],
+  "@context" : {
+    "hasType" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasType",
+      "@type" : "@id"
+    },
+    "determiningFlow" : {
+      "@id" : "http://ontology.bonsai.uno/core#determiningFlow",
+      "@type" : "@id"
+    },
+    "location" : {
+      "@id" : "http://ontology.bonsai.uno/core#location",
+      "@type" : "@id"
+    },
+    "performs" : {
+      "@id" : "http://ontology.bonsai.uno/core#performs",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "objectType" : {
+      "@id" : "http://ontology.bonsai.uno/core#objectType",
+      "@type" : "@id"
+    },
+    "hasUnit" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit",
+      "@type" : "@id"
+    },
+    "hasNumericValue" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "inputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#inputOf",
+      "@type" : "@id"
+    },
+    "outputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#outputOf",
+      "@type" : "@id"
+    },
+    "cc" : "http://creativecommons.org/ns#",
+    "schema" : "http://schema.org/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "om2" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "ns0" : "http://purl.org/vocab/vann/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "time" : "http://www.w3.org/2006/time#",
+    "bont" : "http://ontology.bonsai.uno/core#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "dc" : "http://purl.org/dc/terms/"
+  }
+}

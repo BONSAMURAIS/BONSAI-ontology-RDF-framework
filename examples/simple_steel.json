@@ -2,46 +2,43 @@
   "@graph" : [ {
     "@id" : "_:b0",
     "@type" : "bont:FlowObject",
-    "label" : "Steel"
+    "label" : "Coal"
   }, {
     "@id" : "_:b1",
-    "@type" : "bont:Activity",
-    "hasType" : "_:b2"
+    "@type" : "bont:FlowObject",
+    "label" : "Steel"
   }, {
     "@id" : "_:b2",
-    "@type" : "bont:ActivityType",
-    "label" : "Steel production"
-  }, {
-    "@id" : "_:b3",
     "@type" : "bont:Flow",
-    "objectType" : "_:b0",
-    "outputOf" : "_:b1",
+    "objectType" : "_:b1",
+    "outputOf" : "_:b3",
     "om2:hasNumericValue" : 90,
     "hasUnit" : "om2:kilogram"
   }, {
+    "@id" : "_:b3",
+    "@type" : "bont:Activity",
+    "hasType" : "_:b4"
+  }, {
     "@id" : "_:b4",
-    "@type" : "bont:FlowObject",
-    "label" : "Coal"
+    "@type" : "bont:ActivityType",
+    "label" : "Steel production"
   }, {
     "@id" : "_:b5",
     "@type" : "bont:Flow",
-    "inputOf" : "_:b1",
-    "objectType" : "_:b4",
+    "inputOf" : "_:b3",
+    "objectType" : "_:b0",
     "om2:hasNumericValue" : 100,
     "hasUnit" : "om2:kilogram"
   }, {
     "@id" : "_:b6",
     "@type" : "bont:Agent",
     "hasLocation" : "geo:1275339",
+    "performs" : "_:b3",
     "label" : "FactoryX"
   } ],
   "@context" : {
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "hasType" : {
-      "@id" : "http://ontology.bonsai.uno/core#hasType",
-      "@type" : "@id"
     },
     "objectType" : {
       "@id" : "http://ontology.bonsai.uno/core#objectType",
@@ -59,12 +56,20 @@
       "@id" : "http://ontology.bonsai.uno/core#outputOf",
       "@type" : "@id"
     },
+    "hasType" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasType",
+      "@type" : "@id"
+    },
     "inputOf" : {
       "@id" : "http://ontology.bonsai.uno/core#inputOf",
       "@type" : "@id"
     },
     "hasLocation" : {
       "@id" : "http://ontology.bonsai.uno/core#hasLocation",
+      "@type" : "@id"
+    },
+    "performs" : {
+      "@id" : "http://ontology.bonsai.uno/core#performs",
       "@type" : "@id"
     },
     "geo" : "http://sws.geonames.org/",

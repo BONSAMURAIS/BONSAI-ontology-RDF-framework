@@ -1,8 +1,8 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "bont:ActivityType",
-    "label" : "Atmospheric energy balance"
+    "@type" : "bont:FlowObject",
+    "label" : "Radiative forcing"
   }, {
     "@id" : "_:b1",
     "@type" : "bont:Flow",
@@ -17,18 +17,18 @@
   }, {
     "@id" : "_:b3",
     "@type" : "bont:Activity",
-    "hasType" : "_:b0"
+    "hasType" : "_:b5"
   }, {
     "@id" : "_:b4",
     "@type" : "bont:Flow",
-    "objectType" : "_:b5",
+    "objectType" : "_:b0",
     "outputOf" : "_:b3",
     "om2:hasNumericValue" : 90,
     "hasUnit" : "om2:wattPerSquareMetre"
   }, {
     "@id" : "_:b5",
-    "@type" : "bont:FlowObject",
-    "label" : "Radiative forcing"
+    "@type" : "bont:ActivityType",
+    "label" : "Atmospheric energy balance"
   } ],
   "@context" : {
     "label" : {
@@ -50,12 +50,12 @@
       "@id" : "http://ontology.bonsai.uno/core#inputOf",
       "@type" : "@id"
     },
-    "hasType" : {
-      "@id" : "http://ontology.bonsai.uno/core#hasType",
-      "@type" : "@id"
-    },
     "outputOf" : {
       "@id" : "http://ontology.bonsai.uno/core#outputOf",
+      "@type" : "@id"
+    },
+    "hasType" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasType",
       "@type" : "@id"
     },
     "om2" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",

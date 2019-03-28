@@ -18,12 +18,12 @@
     <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</time:years>
     <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/DurationDescription"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-12-31</time:inXSDDate>
-    <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/Instant"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="A2">
     <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-01-01</time:inXSDDate>
+    <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/Instant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-12-31</time:inXSDDate>
     <rdf:type rdf:resource="https://www.w3.org/TR/owl-time/Instant"/>
   </rdf:Description>
 </rdf:RDF>
