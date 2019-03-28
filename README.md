@@ -19,12 +19,14 @@ Current work is in the `core` ontology.
 
 ## RDF Schema Graph and the Name spaces
 
-Two Bonsai namespace URI examples are:
+Some Bonsai namespace URI examples are:
 
 ```
 <http://rdf.bonsai.uno/activitytype/exiobase3_3_17/A_ALUM>
 <http://rdf.bonsai.uno/flowobject/exiobase3_3_17/C_ADDC>
+<http://rdf.bonsai.uno/location/exiobase3_3_17/WA> *
 ```
+\*: "WA" is a code from Exiobase used for a location/region that's not defined in other ontologies: "RoW: Asia and Pacific". Bonsai usually uses GeoNames references where possible.
 
 Which follows the structure:
 
