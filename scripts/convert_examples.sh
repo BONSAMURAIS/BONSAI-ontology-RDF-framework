@@ -1,4 +1,6 @@
 #!/bin/bash
+# exit when any command fails
+set -e
 
 docker run -it --rm -v `pwd`:/rdf stain/jena riot -v --debug --validate --time examples/*\.ttl
 
