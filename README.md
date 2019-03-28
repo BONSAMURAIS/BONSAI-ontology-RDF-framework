@@ -1,4 +1,5 @@
 # BONSAI-ontology-RDF-framework
+
 Recommendations and discussions on ontology and RDF framework development
 
 
@@ -70,6 +71,10 @@ Currently the following named graphs (and namespaces) are defined
   <http://rdf.bonsai.uno/location/exiobase3_3_17/>
   ```
 
+## Build Status
+
+ - The examples directory [![Build Status](https://travis-ci.org/BONSAMURAIS/BONSAI-ontology-RDF-framework.svg?branch=master)](https://travis-ci.org/BONSAMURAIS/BONSAI-ontology-RDF-framework)
+ - The actual ontology  [![Build Status](https://travis-ci.org/BONSAMURAIS/ontology.svg?branch=master)](https://travis-ci.org/BONSAMURAIS/ontology)
 
 ## Directory Structure
 
