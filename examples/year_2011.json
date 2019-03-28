@@ -2,24 +2,28 @@
   "@graph" : [ {
     "@id" : "_:b0",
     "@type" : "time:Instant",
-    "inXSDDate" : "2011-12-31"
+    "inXSDDate" : "2011-01-01"
   }, {
     "@id" : "_:b1",
-    "@type" : "time:DurationDescription",
-    "time:years" : 1
+    "@type" : "time:Instant",
+    "inXSDDate" : "2011-12-31"
   }, {
     "@id" : "_:b2",
-    "@type" : "time:Instant",
-    "inXSDDate" : "2011-01-01"
+    "@type" : "time:DurationDescription",
+    "time:years" : 1
   }, {
     "@id" : "http://rdf.bonsai.uno/time/2011",
     "@type" : "time:ProperInterval",
     "sameAs" : [ "https://www.wikidata.org/wiki/Q1994", "http://reference.data.gov.uk/doc/year/2011" ],
-    "hasBeginning" : "_:b2",
-    "hasDurationDescription" : "_:b1",
-    "hasEnd" : "_:b0"
+    "hasBeginning" : "_:b0",
+    "hasDurationDescription" : "_:b2",
+    "hasEnd" : "_:b1"
   } ],
   "@context" : {
+    "inXSDDate" : {
+      "@id" : "https://www.w3.org/TR/owl-time/inXSDDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
     "sameAs" : {
       "@id" : "http://www.w3.org/2002/07/owl#sameAs",
       "@type" : "@id"
@@ -35,10 +39,6 @@
     "hasBeginning" : {
       "@id" : "https://www.w3.org/TR/owl-time/hasBeginning",
       "@type" : "@id"
-    },
-    "inXSDDate" : {
-      "@id" : "https://www.w3.org/TR/owl-time/inXSDDate",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
     "years" : {
       "@id" : "https://www.w3.org/TR/owl-time/years",

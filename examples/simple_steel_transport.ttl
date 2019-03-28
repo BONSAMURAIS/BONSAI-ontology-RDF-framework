@@ -1,0 +1,116 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bont: <http://ontology.bonsai.uno/core#> .
+@prefix om2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix geo: <http://sws.geonames.org/> .
+
+
+
+### Natural language
+
+# 100 kg of Coal
+# output of Coal Mining of CoalMineX in Austria
+# input of Market of Market_AT_AU in Austria and in Australia
+
+# 100 kg of Coal
+# output of Market of Market_AT_AU in Austria and in Australia
+# input of Steel production of FactoryX in Australia
+
+# 90 kg of Steel
+# output of Steel production of FactoryX in Australia
+
+
+
+## Flows
+
+_:uri1 a bont:Flow ;
+     bont:outputOf _:uri2 ;
+     bont:inputOf _:uri3 ;
+     om2:hasNumericValue 100 ;
+     om2:hasUnit om2:kilogram ;
+     bont:objectType _:uri4 .
+
+
+_:uri6 a bont:Flow ;
+    bont:outputOf _:uri3 ;
+    bont:inputOf _:uri8 ;
+    om2:hasNumericValue 100 ;
+    om2:hasUnit om2:kilogram ;
+    bont:objectType _:uri4 .
+
+
+_:uri9 a bont:Flow ;
+    bont:outputOf _:uri8 ;
+    om2:hasNumericValue 90 ;
+    om2:hasUnit om2:kilogram ;
+    bont:objectType _:uri10 .
+
+
+
+## Activity
+
+## the instance of coal mining
+_:uri2 a bont:Activity ;
+    bont:hasType _:uri5 .
+
+## the instance of market exchange
+_:uri3 a bont:Activity ;
+    bont:hasType _:uri7 .
+
+
+## the instance of steel production
+_:uri8 a bont:Activity ;
+    bont:hasType _:uri9 .
+
+
+
+## Activity Type
+
+_:uri5 a bont:ActivityType ;
+    rdfs:label "Coal Mining" .
+
+_:uri7 a bont:ActivityType ;
+    rdfs:label "Market" .
+
+_:uri9 a bont:ActivityType ;
+    rdfs:label "Steel production" .
+
+
+## Object Type
+
+_:uri4 a bont:FlowObject ;
+    rdfs:label "Coal" .
+
+
+_:uri10  a bont:FlowObject ;
+    rdfs:label "Steel" .
+
+
+
+
+## Agent
+
+_:uri11 a bont:Agent ;
+    rdfs:label "CoalMineX" ;
+	bont:performs _:uri2 ;
+    bont:hasLocation geo:2782113 .
+
+
+_:uri12 a bont:Agent ;
+    rdfs:label "Market_AT_AU" ;
+	bont:performs _:uri3 ;
+    bont:hasLocation _:uri14 .
+
+_:uri13 a bont:Agent ;
+    rdfs:label "FactoryX" ;
+	bont:performs _:uri8 ;
+    bont:hasLocation geo:2077456 .
+
+
+
+## Custom location
+
+_:uri14 a schema:Place ;
+    owl:hasPart geo:2782113 ;
+    owl:hasPart geo:2077456 .

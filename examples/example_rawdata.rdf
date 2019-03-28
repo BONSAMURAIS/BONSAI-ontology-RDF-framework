@@ -13,174 +13,174 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:om2="http://www.ontology-of-units-of-measure.org/resource/om-2/" > 
   <rdf:Description rdf:nodeID="A0">
-    <bont:objectType rdf:nodeID="A1"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A2"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+    <bont:hasType rdf:nodeID="A1"/>
+    <bont:determiningFlow rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A3">
-    <rdfs:label>Car production</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <bont:objectType rdf:nodeID="A5"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilowattHour"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
-    <bont:outputOf rdf:nodeID="A2"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <bont:objectType rdf:nodeID="A5"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilowattHour"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A7"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <bont:location rdf:resource="http://schema.org/1275339"/>
-    <bont:performs rdf:nodeID="A2"/>
-    <rdfs:label>Plant B</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <rdfs:label>Steel</rdfs:label>
+    <rdfs:label>Car</rdfs:label>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <bont:objectType rdf:nodeID="A11"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</om2:hasNumericValue>
-    <bont:outputOf rdf:nodeID="A12"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <rdfs:label>Electricity production</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
+  <rdf:Description rdf:nodeID="A4">
     <bont:location rdf:resource="http://schema.org/1275339"/>
-    <bont:performs rdf:nodeID="A15"/>
+    <bont:performs rdf:nodeID="A5"/>
     <rdfs:label>Factory X</rdfs:label>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <bont:hasType rdf:nodeID="A16"/>
-    <bont:determiningFlow rdf:nodeID="A17"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+  <rdf:Description rdf:nodeID="A2">
+    <bont:objectType rdf:nodeID="A6"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilowattHour"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
+    <bont:outputOf rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <rdfs:label>Steel production</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+  <rdf:Description rdf:nodeID="A7">
+    <bont:location rdf:resource="http://schema.org/1275339"/>
+    <bont:performs rdf:nodeID="A0"/>
+    <rdfs:label>Plant B</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
+  <rdf:Description rdf:nodeID="A8">
+    <bont:objectType rdf:nodeID="A6"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilowattHour"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</om2:hasNumericValue>
+    <bont:outputOf rdf:nodeID="A9"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdfs:label>Woodchips</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
     <rdfs:label>Iron ore</rdfs:label>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <bont:hasType rdf:nodeID="A13"/>
-    <bont:determiningFlow rdf:nodeID="A4"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+  <rdf:Description rdf:nodeID="A12">
+    <bont:objectType rdf:nodeID="A6"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilowattHour"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A13"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <rdfs:label>Car</rdfs:label>
+  <rdf:Description rdf:nodeID="A6">
+    <rdfs:label>Electricity</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <bont:objectType rdf:nodeID="A3"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</om2:hasNumericValue>
+    <bont:outputOf rdf:nodeID="A13"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <bont:objectType rdf:nodeID="A16"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1300</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A13"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <bont:objectType rdf:nodeID="A18"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A9"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdfs:label>Steel</rdfs:label>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A19">
     <bont:location rdf:resource="http://schema.org/1275339"/>
-    <bont:performs rdf:nodeID="A7"/>
+    <bont:performs rdf:nodeID="A20"/>
     <rdfs:label>Household</rdfs:label>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <bont:hasType rdf:nodeID="A3"/>
-    <bont:determiningFlow rdf:nodeID="A10"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdfs:label>Woodchips</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A20">
-    <rdfs:label>Coal</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="A21">
-    <bont:objectType rdf:nodeID="A5"/>
+    <bont:objectType rdf:nodeID="A6"/>
     <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilowattHour"/>
     <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A12"/>
+    <bont:inputOf rdf:nodeID="A20"/>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A22">
-    <bont:objectType rdf:nodeID="A20"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A23"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A24">
-    <bont:objectType rdf:nodeID="A5"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilowattHour"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</om2:hasNumericValue>
-    <bont:outputOf rdf:nodeID="A23"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A25">
-    <bont:objectType rdf:nodeID="A20"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A15"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A26">
     <bont:objectType rdf:nodeID="A18"/>
     <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A15"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A5"/>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <bont:hasType rdf:nodeID="A27"/>
-    <bont:determiningFlow rdf:nodeID="A6"/>
+  <rdf:Description rdf:nodeID="A23">
+    <bont:objectType rdf:nodeID="A11"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdfs:label>Electricity production</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <bont:objectType rdf:nodeID="A10"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <bont:hasType rdf:nodeID="A25"/>
+    <bont:determiningFlow rdf:nodeID="A14"/>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <bont:objectType rdf:nodeID="A9"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1300</om2:hasNumericValue>
-    <bont:outputOf rdf:nodeID="A15"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  <rdf:Description rdf:nodeID="A25">
+    <rdfs:label>Car production</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A28">
-    <bont:objectType rdf:nodeID="A9"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1300</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A12"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  <rdf:Description rdf:nodeID="A20">
+    <bont:hasType rdf:nodeID="A26"/>
+    <bont:determiningFlow rdf:nodeID="A21"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <rdfs:label>Steel production</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A5">
-    <rdfs:label>Electricity</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+    <bont:hasType rdf:nodeID="A27"/>
+    <bont:determiningFlow rdf:nodeID="A28"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A29">
     <bont:location rdf:resource="http://schema.org/1275339"/>
-    <bont:performs rdf:nodeID="A12"/>
+    <bont:performs rdf:nodeID="A13"/>
     <rdfs:label>Factory Y</rdfs:label>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A27">
-    <rdfs:label>Household final consumption</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="A30">
     <bont:location rdf:resource="http://schema.org/1275339"/>
-    <bont:performs rdf:nodeID="A23"/>
+    <bont:performs rdf:nodeID="A9"/>
     <rdfs:label>Plant A</rdfs:label>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A23">
-    <bont:hasType rdf:nodeID="A13"/>
-    <bont:determiningFlow rdf:nodeID="A24"/>
+  <rdf:Description rdf:nodeID="A18">
+    <rdfs:label>Coal</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <bont:objectType rdf:nodeID="A16"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1300</om2:hasNumericValue>
+    <bont:outputOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdfs:label>Household final consumption</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <bont:hasType rdf:nodeID="A1"/>
+    <bont:determiningFlow rdf:nodeID="A8"/>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
   </rdf:Description>
 </rdf:RDF>

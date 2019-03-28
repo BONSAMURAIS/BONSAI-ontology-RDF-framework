@@ -1,34 +1,34 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
+    "@type" : "bont:ActivityType",
+    "label" : "Atmospheric energy balance"
+  }, {
+    "@id" : "_:b1",
     "@type" : "bont:FlowObject",
     "label" : "Radiative forcing"
   }, {
-    "@id" : "_:b1",
-    "@type" : "bont:Flow",
-    "inputOf" : "_:b3",
-    "objectType" : "_:b2",
-    "om2:hasNumericValue" : 100,
-    "hasUnit" : "om2:kilogram"
-  }, {
     "@id" : "_:b2",
-    "@type" : "bont:FlowObject",
-    "label" : "CO2"
-  }, {
-    "@id" : "_:b3",
-    "@type" : "bont:Activity",
-    "hasType" : "_:b5"
-  }, {
-    "@id" : "_:b4",
     "@type" : "bont:Flow",
-    "objectType" : "_:b0",
+    "objectType" : "_:b1",
     "outputOf" : "_:b3",
     "om2:hasNumericValue" : 90,
     "hasUnit" : "om2:wattPerSquareMetre"
   }, {
+    "@id" : "_:b3",
+    "@type" : "bont:Activity",
+    "hasType" : "_:b0"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "bont:FlowObject",
+    "label" : "CO2"
+  }, {
     "@id" : "_:b5",
-    "@type" : "bont:ActivityType",
-    "label" : "Atmospheric energy balance"
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b3",
+    "objectType" : "_:b4",
+    "om2:hasNumericValue" : 100,
+    "hasUnit" : "om2:kilogram"
   } ],
   "@context" : {
     "label" : {
@@ -46,16 +46,16 @@
       "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericValue",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
-    "inputOf" : {
-      "@id" : "http://ontology.bonsai.uno/core#inputOf",
-      "@type" : "@id"
-    },
     "outputOf" : {
       "@id" : "http://ontology.bonsai.uno/core#outputOf",
       "@type" : "@id"
     },
     "hasType" : {
       "@id" : "http://ontology.bonsai.uno/core#hasType",
+      "@type" : "@id"
+    },
+    "inputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#inputOf",
       "@type" : "@id"
     },
     "om2" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",

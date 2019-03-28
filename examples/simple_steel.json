@@ -1,45 +1,42 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "bont:FlowObject",
-    "label" : "Coal"
+    "@type" : "bont:Flow",
+    "objectType" : "_:b1",
+    "outputOf" : "_:b2",
+    "om2:hasNumericValue" : 90,
+    "hasUnit" : "om2:kilogram"
   }, {
     "@id" : "_:b1",
     "@type" : "bont:FlowObject",
     "label" : "Steel"
   }, {
     "@id" : "_:b2",
-    "@type" : "bont:Flow",
-    "objectType" : "_:b1",
-    "outputOf" : "_:b3",
-    "om2:hasNumericValue" : 90,
-    "hasUnit" : "om2:kilogram"
+    "@type" : "bont:Activity",
+    "hasType" : "_:b5"
   }, {
     "@id" : "_:b3",
-    "@type" : "bont:Activity",
-    "hasType" : "_:b4"
+    "@type" : "bont:FlowObject",
+    "label" : "Coal"
   }, {
     "@id" : "_:b4",
-    "@type" : "bont:ActivityType",
-    "label" : "Steel production"
-  }, {
-    "@id" : "_:b5",
     "@type" : "bont:Flow",
-    "inputOf" : "_:b3",
-    "objectType" : "_:b0",
+    "inputOf" : "_:b2",
+    "objectType" : "_:b3",
     "om2:hasNumericValue" : 100,
     "hasUnit" : "om2:kilogram"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "bont:ActivityType",
+    "label" : "Steel production"
   }, {
     "@id" : "_:b6",
     "@type" : "bont:Agent",
     "hasLocation" : "geo:1275339",
-    "performs" : "_:b3",
+    "performs" : "_:b2",
     "label" : "FactoryX"
   } ],
   "@context" : {
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
     "objectType" : {
       "@id" : "http://ontology.bonsai.uno/core#objectType",
       "@type" : "@id"
@@ -56,12 +53,15 @@
       "@id" : "http://ontology.bonsai.uno/core#outputOf",
       "@type" : "@id"
     },
-    "hasType" : {
-      "@id" : "http://ontology.bonsai.uno/core#hasType",
-      "@type" : "@id"
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "inputOf" : {
       "@id" : "http://ontology.bonsai.uno/core#inputOf",
+      "@type" : "@id"
+    },
+    "hasType" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasType",
       "@type" : "@id"
     },
     "hasLocation" : {

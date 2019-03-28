@@ -4,53 +4,53 @@
     xmlns:bont="http://ontology.bonsai.uno/core#"
     xmlns:om2="http://www.ontology-of-units-of-measure.org/resource/om-2/" > 
   <rdf:Description rdf:nodeID="A0">
-    <bont:objectType rdf:nodeID="A1"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/CelsiusTemperature"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</om2:hasNumericValue>
-    <bont:outputOf rdf:nodeID="A2"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <bont:objectType rdf:nodeID="A4"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A5"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <rdfs:label>Atmospheric energy balance</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <rdfs:label>Radiative forcing</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdfs:label>Temperature increase - 100yrs horizon</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <bont:objectType rdf:nodeID="A7"/>
-    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerSquareMetre"/>
-    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</om2:hasNumericValue>
-    <bont:inputOf rdf:nodeID="A2"/>
-    <bont:outputOf rdf:nodeID="A5"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <bont:hasType rdf:nodeID="A6"/>
+    <bont:hasType rdf:nodeID="A1"/>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A2">
-    <bont:hasType rdf:nodeID="A9"/>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+    <bont:objectType rdf:nodeID="A3"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerSquareMetre"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A0"/>
+    <bont:outputOf rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdfs:label>Atmospheric energy balance</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <bont:objectType rdf:nodeID="A7"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <bont:objectType rdf:nodeID="A9"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/CelsiusTemperature"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</om2:hasNumericValue>
+    <bont:outputOf rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdfs:label>Temperature increase</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A4">
+    <bont:hasType rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
     <rdfs:label>CO2</rdfs:label>
     <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A9">
-    <rdfs:label>Temperature increase</rdfs:label>
-    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+    <rdfs:label>Temperature increase - 100yrs horizon</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdfs:label>Radiative forcing</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
   </rdf:Description>
 </rdf:RDF>

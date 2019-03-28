@@ -1,0 +1,85 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:geo="http://sws.geonames.org/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:schema="http://schema.org/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:bont="http://ontology.bonsai.uno/core#"
+    xmlns:om2="http://www.ontology-of-units-of-measure.org/resource/om-2/" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdfs:label>Market</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdfs:label>Coal</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdfs:label>Steel</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#FlowObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <bont:hasLocation rdf:nodeID="A4"/>
+    <bont:performs rdf:nodeID="A5"/>
+    <rdfs:label>Market_AT_AU</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <bont:hasType rdf:nodeID="A7"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <bont:hasLocation rdf:resource="http://sws.geonames.org/2077456"/>
+    <bont:performs rdf:nodeID="A6"/>
+    <rdfs:label>FactoryX</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <bont:hasLocation rdf:resource="http://sws.geonames.org/2782113"/>
+    <bont:performs rdf:nodeID="A10"/>
+    <rdfs:label>CoalMineX</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <bont:hasType rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <bont:objectType rdf:nodeID="A1"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A5"/>
+    <bont:outputOf rdf:nodeID="A10"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <bont:objectType rdf:nodeID="A1"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</om2:hasNumericValue>
+    <bont:inputOf rdf:nodeID="A6"/>
+    <bont:outputOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:hasPart rdf:resource="http://sws.geonames.org/2077456"/>
+    <owl:hasPart rdf:resource="http://sws.geonames.org/2782113"/>
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdfs:label>Coal Mining</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <bont:hasType rdf:nodeID="A13"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdfs:label>Steel production</rdfs:label>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#ActivityType"/>
+    <bont:objectType rdf:nodeID="A2"/>
+    <om2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    <om2:hasNumericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</om2:hasNumericValue>
+    <bont:outputOf rdf:nodeID="A6"/>
+    <rdf:type rdf:resource="http://ontology.bonsai.uno/core#Flow"/>
+  </rdf:Description>
+</rdf:RDF>

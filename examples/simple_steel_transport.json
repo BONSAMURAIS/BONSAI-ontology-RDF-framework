@@ -1,0 +1,124 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "bont:Agent",
+    "hasLocation" : "geo:2077456",
+    "performs" : "_:b1",
+    "label" : "FactoryX"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "bont:Activity",
+    "hasType" : "_:b11"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "bont:FlowObject",
+    "label" : "Steel"
+  }, {
+    "@id" : "_:b11",
+    "@type" : [ "bont:ActivityType", "bont:Flow" ],
+    "objectType" : "_:b10",
+    "outputOf" : "_:b1",
+    "om2:hasNumericValue" : 90,
+    "hasUnit" : "om2:kilogram",
+    "label" : "Steel production"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "bont:Agent",
+    "hasLocation" : "_:b9",
+    "performs" : "_:b5",
+    "label" : "Market_AT_AU"
+  }, {
+    "@id" : "_:b13",
+    "@type" : "bont:Agent",
+    "hasLocation" : "geo:2782113",
+    "performs" : "_:b6",
+    "label" : "CoalMineX"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "bont:ActivityType",
+    "label" : "Market"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b1",
+    "objectType" : "_:b4",
+    "outputOf" : "_:b5",
+    "om2:hasNumericValue" : 100,
+    "hasUnit" : "om2:kilogram"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "bont:FlowObject",
+    "label" : "Coal"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "bont:Activity",
+    "hasType" : "_:b2"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "bont:Activity",
+    "hasType" : "_:b7"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "bont:ActivityType",
+    "label" : "Coal Mining"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "bont:Flow",
+    "inputOf" : "_:b5",
+    "objectType" : "_:b4",
+    "outputOf" : "_:b6",
+    "om2:hasNumericValue" : 100,
+    "hasUnit" : "om2:kilogram"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "schema:Place",
+    "hasPart" : [ "geo:2077456", "geo:2782113" ]
+  } ],
+  "@context" : {
+    "hasLocation" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasLocation",
+      "@type" : "@id"
+    },
+    "performs" : {
+      "@id" : "http://ontology.bonsai.uno/core#performs",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "objectType" : {
+      "@id" : "http://ontology.bonsai.uno/core#objectType",
+      "@type" : "@id"
+    },
+    "hasUnit" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit",
+      "@type" : "@id"
+    },
+    "hasNumericValue" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "inputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#inputOf",
+      "@type" : "@id"
+    },
+    "outputOf" : {
+      "@id" : "http://ontology.bonsai.uno/core#outputOf",
+      "@type" : "@id"
+    },
+    "hasType" : {
+      "@id" : "http://ontology.bonsai.uno/core#hasType",
+      "@type" : "@id"
+    },
+    "hasPart" : {
+      "@id" : "http://www.w3.org/2002/07/owl#hasPart",
+      "@type" : "@id"
+    },
+    "schema" : "http://schema.org/",
+    "geo" : "http://sws.geonames.org/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "om2" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "bont" : "http://ontology.bonsai.uno/core#"
+  }
+}
