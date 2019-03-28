@@ -18,6 +18,20 @@ Current work is in the `core` ontology.
 
 ## RDF Schema Graph and the Name spaces
 
+Two Bonsai namespace URI examples are:
+
+```
+<http://rdf.bonsai.uno/activitytype/exiobase3_3_17/A_ALUM>
+<http://rdf.bonsai.uno/flowobject/exiobase3_3_17/C_ADDC>
+```
+
+Which follows the structure:
+
+```[generic]/[ontologyClassName]/[dataSource]/[code]```
+
+We use singular (flowobject not flowobjects).
+
+
 Currently the following named graphs (and namespaces) are defined
 
 - Bonsai rdf schema to define  activity, flow, flow objects
