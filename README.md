@@ -18,7 +18,7 @@ The current Ontology Schema can be visualized on [www.visualdataweb.de/ontology_
 ![BONSAI schema](material/ontology_v0.1.svg)
 
 
-The actual ontology is updated in the sister repository: [ontology[(https://github.com/BONSAMURAIS/ontology)
+The actual ontology is updated in the sister repository: [ontology](https://github.com/BONSAMURAIS/ontology)
 
 Current work is in the `core` ontology.
 
