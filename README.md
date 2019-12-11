@@ -12,7 +12,7 @@ The repo currently contains:
 1. The documentation of current RDF schema proposed
 2. Summary of the discussions leading to ontology development
 
-![BONSAI schema](BONSAI-ontology.pdf)
+![](https://github.com/BONSAMURAIS/BONSAI-ontology-RDF-framework/blob/master/BONSAI-ontology.pdf)
 
 
 The actual ontology is updated in the sister repository: [ontology](https://github.com/BONSAMURAIS/ontology)
