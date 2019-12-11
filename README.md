@@ -15,7 +15,7 @@ The repo currently contains:
 
 A schema of the proposed ontology is given below:
 
-![BONSAI ontology](BONSAI-ontology.pdf)
+![BONSAI ontology](BONSAI-ontology.jpg)
 
 
 The ontology is updated in the sister repository: [ontology](https://github.com/BONSAMURAIS/ontology)
