@@ -13,9 +13,9 @@ The repo currently contains:
 2. Summary of the discussions leading to ontology development
 
 
-A schema of the proposed ontology is given below:
+A schema of the BONSAI ontology is given below:
 
-![BONSAI ontology](BONSAI-ontology.jpg)
+![BONSAI ontology](https://github.com/BONSAMURAIS/BONSAI-ontology-RDF-framework/blob/master/NewOntology-v2%20(1).jpg)
 
 
 The ontology is updated in the sister repository: [ontology](https://github.com/BONSAMURAIS/ontology)
