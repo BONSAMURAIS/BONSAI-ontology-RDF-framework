@@ -5,7 +5,7 @@ Recommendations and discussions on ontology and RDF framework development
 
 Discussions and tools regarding the development of a minimal ontology for BONSAI.
 
-This repo has been created to create a common platform for all of the discussions.
+This repo has been created as a common platform for all of the discussions.
 
 The repo currently contains:
 
